@@ -1,0 +1,23 @@
+html{
+    font-family: "Libre Franklin", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#page {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 700px;
+}
+
+#main-title{
+    width: 100%;
+}
+
+
+#article{
+    font-size: 1.06rem;
+    line-height: 1.7em;
+}
