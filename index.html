@@ -19,6 +19,7 @@
                 Practitioners are plagued with networks being too large to store onto memory chips or 
                 too slow for real-world use cases.
             </p>
+            <h2>Networks are overparameterized</h2>
             <p>
                 Progress made in network sparsification has presented post-hoc (after training) methods that allow us 
                 to remove parameters in a neural network and then fine tune the leftover parameters to achieve a similar 
@@ -36,6 +37,7 @@
                 value achieves task performance competitive with the full network. This idea suggests that if we can sparsify 
                 a network by removing only unimportant weights, we can achieve a smaller parameter size without a task performance cost.
             </p>
+            <h2>Understanding importance</h2>
             <p>
                 To take advantage of the ideas we've learned so far, we have to understand the importance of weights. 
                 We can study the coadaptation matrix of the neural network's parameters after its done training.
@@ -50,6 +52,7 @@
                 the neural network still has some dependence on low magnitude weights, which suggests that sparisfying based on 
                 weight magnitude is not enough.
             </p>
+            <h2>Targeted Dropout</h2>
             <p>
                 This leads to Targeted Dropout, our approach for creating the winning ticket and controlling its size. 
                 At every forward pass during training, we apply stochastic dropout to some “targeted portion” of the network, which are
