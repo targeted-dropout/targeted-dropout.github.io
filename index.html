@@ -61,10 +61,6 @@
                 dependent the targeted portion, due to stochastic dropout. Finally, we are left with a network containing
                 only the winning ticket. 
             </p>
-            <p>The algorithm is simple to implement and can be applied to a networks weights or units:</p>
-            <div><img src="tdsteps.png" style="width:100%;display:block;"/></div>
-            <p>Reference implementation for weight-level targeted dropout written in Tensorflow</p>
-            <script src="https://gist.github.com/targeted-dropout/98445945a21a78531d3313599f5b3390.js"></script>
             <p>
                 Let's study the coadaptation matrix of a network after its trained with targeted dropout. 
                 In this case, we set the targeted portion to be 75%, because we hope to use only 25% of the parameters after training.
@@ -80,6 +76,11 @@
                 losing around 3-4% in task performance. More results and parameters can be reviewed in the 
                 Experiments section of our paper. 
             </p>
+            <h2>Implementation</h2>
+            <p>The algorithm is simple to implement and can be applied to a networks weights or units:</p>
+            <div><img src="tdsteps.png" style="width:100%;display:block;"/></div>
+            <p>Reference implementation for weight-level targeted dropout written in Tensorflow</p>
+            <script src="https://gist.github.com/targeted-dropout/98445945a21a78531d3313599f5b3390.js"></script>
         </div>
     </div>
 </body>
