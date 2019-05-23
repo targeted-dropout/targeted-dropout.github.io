@@ -43,7 +43,7 @@
                 We can study the coadaptation matrix of the neural network's parameters after its done training.
             </p>
             <div>
-                <img src="comtx1.png" style="width:300px;display:block;margin:0 auto;"/><img src="coeq.png" style="width:200px;display:block;margin:0 auto;"/>
+                <img src="comtx1.png" style="width:350px;display:block;margin:0 auto;"/><img src="coeq.png" style="width:200px;display:block;margin:0 auto;"/>
             </div>
             <p>
                 Position (i, j) of the matrix represents the dependence of parameter i on parameter j. Pruning a set of 
@@ -69,7 +69,7 @@
                 It is clear that all the high magnitude weights are only dependent on one another. Since this is the case, we can safely remove
                 75% of the least important parameters without removing any dependence amongst weights.
             </p>
-            <div><img src="comtx2.png" style="width:300px;display:block;margin:0 auto;"/></div>
+            <div><img src="comtx2.png" style="width:350px;display:block;margin:0 auto;"/></div>
             <p>
                 Empirically we saw that our technique is generally applicable to different architectures 
                 (ResNet32, VGG, Transformer) solving different task domains (translation, image classification). 
