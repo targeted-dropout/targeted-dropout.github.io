@@ -39,7 +39,11 @@
             <p>
                 To take advantage of the ideas we've learned so far, we have to understand the importance of weights. 
                 We can study the coadaptation matrix of the neural network's parameters after its done training.
-                <img src="comtx1.png"/><img src="coeq.png"/>
+            </p>
+            <div>
+                <img src="comtx1.png"/><img src="coeq.png" style="width:100px;display:block;"/>
+            </div>
+            <p>
                 Position (i, j) of the matrix represents the dependence of parameter i on parameter j. Pruning a set of 
                 weights {l, m, n} will change the loss proportional to the sum of the l, m, and nth columns. 
                 The weights are ordered by the decreasing magnitude from left to right. As we can see from this matrix,
@@ -53,7 +57,9 @@
                 (i.e. weight magnitude, unit norm). After training, we can remove the least important parameters because the network is no longer
                 dependent the targeted portion, due to stochastic dropout. Finally, we are left with a network containing
                 only the winning ticket.
-                <img src="comtx2.png"/>
+            </p>
+            <div><img src="comtx2.png"/></div>
+            <p>
                 Let's study the coadaptation matrix of a network after its trained with targeted dropout. 
                 In this case, we set the targeted portion to be 75%, because we hope to use only 25% of the parameters after training.
                 It is clear that all the high magnitude weights are only dependent on one another. Since this is the case, we can safely remove
