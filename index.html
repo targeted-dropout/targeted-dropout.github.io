@@ -56,15 +56,17 @@
                 the least important parameters (losing tickets), based on some approximation of importance 
                 (i.e. weight magnitude, unit norm). After training, we can remove the least important parameters because the network is no longer
                 dependent the targeted portion, due to stochastic dropout. Finally, we are left with a network containing
-                only the winning ticket.
+                only the winning ticket. 
             </p>
-            <div><img src="comtx2.png"/></div>
+            <p>The algorithm is simple to implement and can be applied to a networks weights or units:</p>
+            <div><img src="tdsteps.png"/></div>
             <p>
                 Let's study the coadaptation matrix of a network after its trained with targeted dropout. 
                 In this case, we set the targeted portion to be 75%, because we hope to use only 25% of the parameters after training.
                 It is clear that all the high magnitude weights are only dependent on one another. Since this is the case, we can safely remove
                 75% of the least important parameters without removing any dependence amongst weights.
             </p>
+            <div><img src="comtx2.png"/></div>
             <p>
                 Empirically we saw that our technique is generally applicable to different architectures 
                 (ResNet32, VGG, Transformer) solving different task domains (translation, image classification). 
